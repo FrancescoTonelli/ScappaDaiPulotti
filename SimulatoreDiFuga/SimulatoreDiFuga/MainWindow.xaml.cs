@@ -23,20 +23,25 @@ namespace SimulatoreDiFuga
     {
         readonly Uri uriTruffatore = new Uri("truffatore.png", UriKind.Relative);
         readonly Uri uriLadro = new Uri("ladro.png", UriKind.Relative);
+        readonly Uri uriScooter = new Uri("scooter.png", UriKind.Relative);
         public MainWindow()
         {
             InitializeComponent();
 
             Thread t1 = new Thread(new ThreadStart(MuoviTruffatore));
             Thread t2 = new Thread(new ThreadStart(MuoviLadro));
+            Thread t3 = new Thread(new ThreadStart(MuoviScooter));
 
             ImageSource immTruffatore = new BitmapImage(uriTruffatore);
             imgTruffatore.Source = immTruffatore;
             ImageSource immLadro = new BitmapImage(uriLadro);
             imgLadro.Source = immLadro;
+            ImageSource immScooter = new BitmapImage(uriScooter);
+            imgScooter.Source = immScooter;
 
             t1.Start();
             t2.Start();
+            t3.Start();
         }
 
 
@@ -67,7 +72,23 @@ namespace SimulatoreDiFuga
                 this.Dispatcher.BeginInvoke(new Action(() =>
                 {
 
-                    imgLadro.Margin = new Thickness(margineDaSpostare, 229, 0, 0);
+                    imgLadro.Margin = new Thickness(margineDaSpostare, 214, 0, 0);
+
+                }));
+                Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(1, 1001)));
+            }
+        }
+
+        public void MuoviScooter()
+        {
+            int margineDaSpostare = 700;
+            while (margineDaSpostare > 50)
+            {
+                margineDaSpostare -= 50;
+                this.Dispatcher.BeginInvoke(new Action(() =>
+                {
+
+                    imgScooter.Margin = new Thickness(margineDaSpostare, 172, 0, 0);
 
                 }));
                 Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(1, 1001)));

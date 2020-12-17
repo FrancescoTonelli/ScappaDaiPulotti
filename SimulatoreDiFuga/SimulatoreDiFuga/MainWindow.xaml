@@ -8,8 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Image x:Name="imgSfondo" HorizontalAlignment="Left" Height="266" Margin="30,78,0,0" VerticalAlignment="Top" Width="738" Source="Sfondo.PNG"/>
-        <Image x:Name="imgLadro" HorizontalAlignment="Left" Height="74" Margin="700,229,0,0" VerticalAlignment="Top" Width="68" Source="ladro.png"/>
+        <Image x:Name="imgLadro" HorizontalAlignment="Left" Height="74" Margin="700,214,0,0" VerticalAlignment="Top" Width="68" Source="ladro.png"/>
         <Image x:Name="imgTruffatore" HorizontalAlignment="Left" Height="74" Margin="700,270,0,0" VerticalAlignment="Top" Width="68" Source="truffatore.png"/>
+        <Image x:Name="imgScooter" HorizontalAlignment="Left" Height="74" Margin="700,172,0,0" VerticalAlignment="Top" Width="68" Source="scooter.png"/>
 
     </Grid>
 </Window>
