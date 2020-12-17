@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulatoreDiFuga", "SimulatoreDiFuga\SimulatoreDiFuga.csproj", "{35CD92EE-29EA-4205-8C77-03721E348380}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35CD92EE-29EA-4205-8C77-03721E348380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35CD92EE-29EA-4205-8C77-03721E348380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35CD92EE-29EA-4205-8C77-03721E348380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35CD92EE-29EA-4205-8C77-03721E348380}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F6DD7A1-32A1-4E2C-921C-AC8E52279FE9}
+	EndGlobalSection
+EndGlobal
