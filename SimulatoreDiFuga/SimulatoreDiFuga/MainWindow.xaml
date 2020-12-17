@@ -14,7 +14,7 @@
         <Button x:Name="btnStart" Content="Chiama la polizia" HorizontalAlignment="Left" Margin="294,10,0,0" VerticalAlignment="Top" Width="200" Height="42" Click="btnStart_Click"/>
         <Label x:Name="lbl1" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="30,349,0,0" VerticalAlignment="Top" Width="738"/>
         <Label x:Name="lbl2" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="30,380,0,0" VerticalAlignment="Top" Width="371"/>
-        <Label x:Name="lbl3" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="436,380,0,0" VerticalAlignment="Top" Width="332"/>
+        <Label x:Name="lbl3" Content="" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="401,380,0,0" VerticalAlignment="Top" Width="362"/>
 
     </Grid>
 </Window>

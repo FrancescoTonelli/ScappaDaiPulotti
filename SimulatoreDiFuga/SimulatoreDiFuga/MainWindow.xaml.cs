@@ -29,14 +29,12 @@ namespace SimulatoreDiFuga
         Thread t1;
         Thread t2;
         Thread t3;
+        Thread t4;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            t1 = new Thread(new ThreadStart(MuoviTruffatore));
-            t2 = new Thread(new ThreadStart(MuoviLadro));
-            t3 = new Thread(new ThreadStart(MuoviScooter));
 
             ImageSource immTruffatore = new BitmapImage(uriTruffatore);
             imgTruffatore.Source = immTruffatore;
@@ -46,15 +44,12 @@ namespace SimulatoreDiFuga
             imgScooter.Source = immScooter;
         }
 
-        public bool TruffatoreArrivato;
-        public bool LadroArrivato;
-        public bool ScooterArrivato;
+        public List<string> Arrivo;
 
         Random r = new Random();
 
         public void MuoviTruffatore()
         {
-            TruffatoreArrivato = false;
             int margineDaSpostare = 700;
             while (margineDaSpostare > 50)
             {
@@ -67,30 +62,12 @@ namespace SimulatoreDiFuga
 
                 }));
             }
-            TruffatoreArrivato = true;
-
-            this.Dispatcher.BeginInvoke(new Action(() =>
-            {
-                if (LadroArrivato == false && ScooterArrivato == false)
-                {
-                    lbl1.Content = "Il truffatore è scappato dalla polizia con grande vantaggio";
-                }
-                else if (LadroArrivato == true && ScooterArrivato == true)
-                {
-                    lbl3.Content = "Il truffatore è scappato dalla polizia per un soffio";
-                }
-                else if (LadroArrivato == true || ScooterArrivato == true)
-                {
-                    lbl2.Content = "Il truffatore è scappato dalla polizia";
-                }
-
-            }));
+            Arrivo.Add("Il truffatore");
             
         }
 
         public void MuoviLadro()
         {
-            LadroArrivato = false;
             int margineDaSpostare = 700;
             while (margineDaSpostare > 50)
             {
@@ -103,28 +80,11 @@ namespace SimulatoreDiFuga
 
                 }));
             }
-            LadroArrivato = true;
-            this.Dispatcher.BeginInvoke(new Action(() =>
-            {
-                if (TruffatoreArrivato == false && ScooterArrivato == false)
-                {
-                    lbl1.Content = "Il ladro è scappato dalla polizia con grande vantaggio";
-                }
-                else if (TruffatoreArrivato == true && ScooterArrivato == true)
-                {
-                    lbl3.Content = "Il ladro è scappato dalla polizia per un soffio";
-                }
-                else if (TruffatoreArrivato == true || ScooterArrivato == true)
-                {
-                    lbl2.Content = "Il ladro è scappato dalla polizia";
-                }
-
-            }));
+            Arrivo.Add("Il ladro");
         }
 
         public void MuoviScooter()
         {
-            ScooterArrivato = false;
             int margineDaSpostare = 700;
             while (margineDaSpostare > 50)
             {
@@ -137,32 +97,58 @@ namespace SimulatoreDiFuga
 
                 }));
             }
-            ScooterArrivato = true;
-
-            this.Dispatcher.BeginInvoke(new Action(() =>
-            {
-                if (TruffatoreArrivato == false && LadroArrivato == false)
-                {
-                    lbl1.Content = "Lo scooter fuori controllo è scappato dalla polizia con grande vantaggio";
-                }
-                else if (TruffatoreArrivato == true && LadroArrivato == true)
-                {
-                    lbl3.Content = "Lo scooter fuori controllo è scappato dalla polizia per un soffio";
-                }
-                else if (TruffatoreArrivato == true || LadroArrivato == true)
-                {
-                    lbl2.Content = "Lo scooter fuori controllo è scappato dalla polizia";
-                }
-
-            }));
+            Arrivo.Add("Lo scooter fuori controllo");
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             btnStart.IsEnabled = false;
+
+            Arrivo = new List<string>();
+
+            imgTruffatore.Margin = new Thickness(700, 270, 0, 0);
+
+            imgLadro.Margin = new Thickness(700, 214, 0, 0);
+
+            imgScooter.Margin = new Thickness(700, 172, 0, 0);
+
+            t1 = new Thread(new ThreadStart(MuoviTruffatore));
+            t2 = new Thread(new ThreadStart(MuoviLadro));
+            t3 = new Thread(new ThreadStart(MuoviScooter));
+            t4 = new Thread(new ThreadStart(ControlloERiattivazione));
+
+            lbl1.Content = "";
+            lbl2.Content = "";
+            lbl3.Content = "";
+
             t1.Start();
             t2.Start();
             t3.Start();
+
+            t4.Start();
+
+            
+        }
+
+        private void ControlloERiattivazione()
+        {
+            while (Arrivo.Count != 3)
+            {
+                Thread.Sleep(TimeSpan.FromMilliseconds(1));
+            }
+
+            t1.Join();
+            t2.Join();
+            t3.Join();
+
+            this.Dispatcher.BeginInvoke(new Action(() =>
+            {
+                lbl1.Content = Arrivo[0] + " è scappato dalla polizia con grande vantaggio";
+                lbl2.Content = Arrivo[1] + " è scappato dalla polizia";
+                lbl3.Content = Arrivo[2] + " è scappato dalla polizia per un soffio";
+                btnStart.IsEnabled = true;
+            }));
+
         }
     }
 }
