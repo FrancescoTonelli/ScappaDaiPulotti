@@ -22,17 +22,25 @@ namespace SimulatoreDiFuga
     public partial class MainWindow : Window
     {
         readonly Uri uriTruffatore = new Uri("truffatore.png", UriKind.Relative);
+        readonly Uri uriLadro = new Uri("ladro.png", UriKind.Relative);
         public MainWindow()
         {
             InitializeComponent();
 
             Thread t1 = new Thread(new ThreadStart(MuoviTruffatore));
+            Thread t2 = new Thread(new ThreadStart(MuoviLadro));
 
             ImageSource immTruffatore = new BitmapImage(uriTruffatore);
             imgTruffatore.Source = immTruffatore;
+            ImageSource immLadro = new BitmapImage(uriLadro);
+            imgLadro.Source = immLadro;
 
             t1.Start();
+            t2.Start();
         }
+
+
+        Random r = new Random();
 
         public void MuoviTruffatore()
         {
@@ -46,10 +54,24 @@ namespace SimulatoreDiFuga
                     imgTruffatore.Margin = new Thickness(margineDaSpostare, 270, 0, 0);
 
                 }));
-                Random r = new Random();
                 Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(1, 1001)));
             }
+        }
 
+        public void MuoviLadro()
+        {
+            int margineDaSpostare = 700;
+            while (margineDaSpostare > 50)
+            {
+                margineDaSpostare -= 50;
+                this.Dispatcher.BeginInvoke(new Action(() =>
+                {
+
+                    imgLadro.Margin = new Thickness(margineDaSpostare, 229, 0, 0);
+
+                }));
+                Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(1, 1001)));
+            }
         }
     }
 }
