@@ -24,13 +24,19 @@ namespace SimulatoreDiFuga
         readonly Uri uriTruffatore = new Uri("truffatore.png", UriKind.Relative);
         readonly Uri uriLadro = new Uri("ladro.png", UriKind.Relative);
         readonly Uri uriScooter = new Uri("scooter.png", UriKind.Relative);
+
+
+        Thread t1;
+        Thread t2;
+        Thread t3;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            Thread t1 = new Thread(new ThreadStart(MuoviTruffatore));
-            Thread t2 = new Thread(new ThreadStart(MuoviLadro));
-            Thread t3 = new Thread(new ThreadStart(MuoviScooter));
+            t1 = new Thread(new ThreadStart(MuoviTruffatore));
+            t2 = new Thread(new ThreadStart(MuoviLadro));
+            t3 = new Thread(new ThreadStart(MuoviScooter));
 
             ImageSource immTruffatore = new BitmapImage(uriTruffatore);
             imgTruffatore.Source = immTruffatore;
@@ -38,11 +44,8 @@ namespace SimulatoreDiFuga
             imgLadro.Source = immLadro;
             ImageSource immScooter = new BitmapImage(uriScooter);
             imgScooter.Source = immScooter;
-
-            t1.Start();
-            t2.Start();
-            t3.Start();
         }
+
 
 
         Random r = new Random();
@@ -93,6 +96,13 @@ namespace SimulatoreDiFuga
                 }));
                 Thread.Sleep(TimeSpan.FromMilliseconds(r.Next(1, 1001)));
             }
+        }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            t1.Start();
+            t2.Start();
+            t3.Start();
         }
     }
 }
