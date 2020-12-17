@@ -19,7 +19,7 @@ namespace SimulatoreDiFuga
     /// <summary>
     /// Logica di interazione per MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window //IMPORTANTE: i branch e il merge non sono stati usati perchè la programmazione del codice doveva essere lineare, programmare ogni "figura" in un branch suo avrebbe portato solo ad errori nel merge
     {
         readonly Uri uriTruffatore = new Uri("truffatore.png", UriKind.Relative);
         readonly Uri uriLadro = new Uri("ladro.png", UriKind.Relative);
