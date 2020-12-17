@@ -1,0 +1,15 @@
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\bin\Debug\SimulatoreDiFuga.exe.config
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\bin\Debug\SimulatoreDiFuga.exe
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\bin\Debug\SimulatoreDiFuga.pdb
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\SimulatoreDiFuga.csprojAssemblyReference.cache
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\MainWindow.g.cs
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\App.g.cs
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\SimulatoreDiFuga_MarkupCompile.cache
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\SimulatoreDiFuga_MarkupCompile.lref
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\MainWindow.baml
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\SimulatoreDiFuga.g.resources
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\SimulatoreDiFuga.Properties.Resources.resources
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\SimulatoreDiFuga.csproj.GenerateResource.cache
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\SimulatoreDiFuga.csproj.CoreCompileInputs.cache
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\SimulatoreDiFuga.exe
+C:\Users\tonbr\Desktop\ScappaDaiPulotti\SimulatoreDiFuga\SimulatoreDiFuga\obj\Debug\SimulatoreDiFuga.pdb
