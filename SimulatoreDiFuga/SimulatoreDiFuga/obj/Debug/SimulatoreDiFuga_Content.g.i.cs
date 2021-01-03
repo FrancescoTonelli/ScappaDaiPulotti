@@ -8,9 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ladro.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scooter.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sfondo.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("truffatore.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sfondo2.png")]
 
 

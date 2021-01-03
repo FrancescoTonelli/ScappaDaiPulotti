@@ -100,5 +100,8 @@
     <Resource Include="Sfondo.PNG" />
     <Resource Include="truffatore.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sfondo2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

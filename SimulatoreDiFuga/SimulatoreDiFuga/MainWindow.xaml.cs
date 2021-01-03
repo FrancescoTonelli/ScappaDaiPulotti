@@ -76,7 +76,7 @@ namespace SimulatoreDiFuga
                 this.Dispatcher.BeginInvoke(new Action(() =>
                 {
 
-                    imgLadro.Margin = new Thickness(margineDaSpostare, 214, 0, 0);
+                    imgLadro.Margin = new Thickness(margineDaSpostare, 236, 0, 0);
 
                 }));
             }
@@ -93,7 +93,7 @@ namespace SimulatoreDiFuga
                 this.Dispatcher.BeginInvoke(new Action(() =>
                 {
 
-                    imgScooter.Margin = new Thickness(margineDaSpostare, 172, 0, 0);
+                    imgScooter.Margin = new Thickness(margineDaSpostare, 205, 0, 0);
 
                 }));
             }
@@ -108,9 +108,9 @@ namespace SimulatoreDiFuga
 
             imgTruffatore.Margin = new Thickness(700, 270, 0, 0);
 
-            imgLadro.Margin = new Thickness(700, 214, 0, 0);
+            imgLadro.Margin = new Thickness(700, 236, 0, 0);
 
-            imgScooter.Margin = new Thickness(700, 172, 0, 0);
+            imgScooter.Margin = new Thickness(700, 205, 0, 0);
 
             t1 = new Thread(new ThreadStart(MuoviTruffatore));
             t2 = new Thread(new ThreadStart(MuoviLadro));
